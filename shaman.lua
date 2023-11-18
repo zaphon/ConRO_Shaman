@@ -133,7 +133,7 @@ function ConRO.Shaman.Under10(_, timeShift, currentSpell, gcd, tChosen, pvpChose
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -171,7 +171,7 @@ function ConRO.Shaman.Under10Def(_, timeShift, currentSpell, gcd, tChosen, pvpCh
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Warnings
 
@@ -1010,7 +1010,7 @@ function ConRO.Shaman.EnhancementDef(_, timeShift, currentSpell, gcd, tChosen, p
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 	if _HealingSurge_RDY and _Player_Percent_Health <= 80 and _MaelstromWeapon_COUNT >= 5 then
@@ -1073,7 +1073,7 @@ function ConRO.Shaman.Restoration(_, timeShift, currentSpell, gcd, tChosen, pvpC
 --Conditions
 	local _is_moving = ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee = ConRO:Targets("Melee");
-	local _target_in_10yrds = CheckInteractDistance("target", 3);
+	local _target_in_10yrds = ConRO:CheckInteractDistance("target", 3);
 
 		if currentSpell == _LavaBurst then
 			_LavaBurst_CHARGES = _LavaBurst_CHARGES - 1;
@@ -1149,7 +1149,7 @@ function ConRO.Shaman.RestorationDef(_, timeShift, currentSpell, gcd, tChosen, p
 --Conditions
 	local _is_moving 																					= ConRO:PlayerSpeed();
 	local _enemies_in_melee, _target_in_melee															= ConRO:Targets("Melee");
-	local _target_in_10yrds 																			= CheckInteractDistance("target", 3);
+	local _target_in_10yrds 																			= ConRO:CheckInteractDistance("target", 3);
 
 --Rotations	
 	if _AstralShift_RDY then
